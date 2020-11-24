@@ -8,7 +8,7 @@ import csv
 
 
 this_folder = os.path.dirname(os.path.abspath(__file__))
-file_name = this_folder+'/train.csv'
+file_name = this_folder+'/data/train.csv'
 
 # Use only the last 11 columns
 useful_cols = list(pd.read_csv(file_name, nrows =1))
@@ -168,11 +168,11 @@ all_features = layers.concatenate(
         estimated_salary_encoded,
     ]
 )
-
+output_bias = tf.keras.initializers.Constant(np.log([1559/5941]))
 x = layers.Dense(50, activation="relu")(all_features)
 x = layers.Dense(25, activation="relu")(x)
 x = layers.Dropout(0.5)(x)
-output = layers.Dense(1, activation="sigmoid")(x)
+output = layers.Dense(1, activation="sigmoid",bias_initializer=output_bias)(x)
 
 
 model = keras.Model(all_inputs, output)
@@ -189,7 +189,7 @@ model.fit(train_ds, epochs=50, validation_data=val_ds)
 attr = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
 predicted = []
 
-with open(this_folder+"/assignment-test.csv") as testfile:
+with open(this_folder+"/data/assignment-test.csv") as testfile:
     for i, row in enumerate(testfile):
         if i==0:
             predicted.append(["RowNumber","Exited"])
