@@ -2,9 +2,9 @@
 
 Group ID: 4
 
-Sida Huang$\qquad$ $\qquad$1155124414$\qquad$ $\qquad$sdhuang@link.cuhk.edu.hk
+Sida Huang
 
-Xiran Zhang$\qquad$ $\qquad$1155124428$\qquad$ $\qquad$1155124428@link.cuhk.edu.hk
+Xiran Zhang
 
 
 
@@ -35,5 +35,3 @@ Xiran Zhang$\qquad$ $\qquad$1155124428$\qquad$ $\qquad$1155124428@link.cuhk.edu.
   - final_model.py: generating submission_2.csv
 
 
-
-This is our submission for the second time. We just modified the result of SVM in task 1 compared with the first submission.
