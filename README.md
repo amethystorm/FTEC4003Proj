@@ -11,7 +11,6 @@ Xiran Zhang
 ## File description
 
 - README.md: This introduction file
-- FTEC4003_report_04.pdf: Project report (Page 2 - 5: Task 1 report; Page 6 - 13: Task 2 report)
 - submission_1_DT.csv: Task 1 submission, Decision Tree, f1_score = 0.29789929272669696
 - submission_1_GNB.csv: Task 1 submission, Gaussian Naive Bayes, f1_score = 0.3895608729950039
 - submission_2.csv: Task 2 submission, f1_score = 0.6351209253417456
